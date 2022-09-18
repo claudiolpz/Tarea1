@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+// package search;
+
+service PageSearch{
+    rpc GetServerResponse(Message) returns (Pags){}
+}
+
+message Message{
+    string message = 1;
+}
+
+message Pags{
+    repeated Pag pag = 1;
+}
+
+message Pag{
+
+    int32 id = 1;
+    string title = 2;
+    string description = 3;
+    string url = 4;
+}
