@@ -1,6 +1,6 @@
 # Tarea1
 
-Para levantar las instacias se debe ejecutar el siguiente comando:
+Para levantar las instancias se debe ejecutar el siguiente comando:
 ```
 docker-compose up --build
 ```
@@ -11,11 +11,11 @@ ejemplo:
 http://localhost:3000/pag/search?q=maya
 ```
 
-Para bajar las instacias se debe ejuctar el siguiente comando:
+Para bajar las instancias se debe ejecutar el siguiente comando:
 ```
 docker-compose down
 ```
-Para eliminar el cache se ejecuta el siguiente comando:
+Para eliminar el caché se ejecuta el siguiente comando:
 ```
 docker system prune -a
 ```
