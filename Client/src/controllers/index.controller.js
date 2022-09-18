@@ -66,14 +66,14 @@ const client = new PageSearch(
 const searchpag=(req,res)=>{
     const busqueda=req.query.q
     let cache = null;
-    const start = new Date();
+    // const start = new Date();
     (async () => {
             let reply1 = await redis_client1.get(busqueda);
             aux=0
 
             if(reply1 && aux==0){
                 aux=1;
-                cache = JSON.parse(reply1);
+                cache = JSON.parse(reply1);/*  */
                 console.log("Busqueda: "+busqueda)
                 console.log("Encontrado en Caché! en redis 1")
                 console.log("Resultados:")
@@ -89,8 +89,8 @@ const searchpag=(req,res)=>{
                 string_total=string_total+stringsumar+'\n'
                 }
                 console.log(string_total)
-                const end = new Date() - start;
-                console.log("Tiempo "+end+" ms")
+                // const end = new Date() - start;
+                // console.log("Tiempo "+end)
                 
 
                 console.log("-------------------------------------------------------------------------------------------------------------------------------")
@@ -117,8 +117,8 @@ const searchpag=(req,res)=>{
                 string_total=string_total+stringsumar+'\n'
                 }
                 console.log(string_total)
-                const end = new Date() - start;
-                console.log("tiempo "+end+" ms")
+                // const end = new Date() - start;
+                // console.log("tiempo "+end)
                 
 
                 console.log("-------------------------------------------------------------------------------------------------------------------------------")
@@ -146,8 +146,8 @@ const searchpag=(req,res)=>{
                 string_total=string_total+stringsumar+'\n'
                 }
                 console.log(string_total)
-                const end = new Date() - start;
-                console.log("tiempo "+end*" ms")
+                // const end = new Date() - start;
+                // console.log("tiempo "+end)
 
                 console.log("-------------------------------------------------------------------------------------------------------------------------------")
 
@@ -180,8 +180,8 @@ const searchpag=(req,res)=>{
                         
                         
                         array_of_functions[a]();
-                        const end = new Date() - start;
-                        console.log("tiempo "+end+" ms")
+                        // const end = new Date() - start;
+                        // console.log("tiempo "+end)
                         res.status(200).json(t1);}
                        
 
